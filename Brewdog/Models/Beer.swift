@@ -12,8 +12,11 @@ struct Beer: Decodable {
     let name: String
     let description: String?
     let image: String?
+    let abv: Double?
+    let ingredients: Ingredients?
+    let method: Method?
     
     private enum CodingKeys : String, CodingKey {
-        case id, name, description, image = "image_url"
+        case id, name, description, image = "image_url", abv, ingredients, method
     }
 }
